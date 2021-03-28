@@ -1,0 +1,14 @@
+zuul:
+  #Service will be mapped under the /api URI
+  ignored-patterns: /actuator/**
+  prefix: /api
+  routes:
+    todomanagement-service:
+      path: /todomanagement-service/**
+      serviceId: todomanagement-service
+      stripPrefix: true
+     
+    todoquery-service:
+      path: /todoquery-service/**
+      serviceId: todoquery-service
+      stripPrefix: true
